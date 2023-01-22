@@ -1,5 +1,6 @@
 import { BackButton } from '../components/BackButton';
 import { ProgressBar } from '../components/ProgressBar';
+import { Checkbox } from '../components/Checkbox';
 import { useRoute } from '@react-navigation/native';
 import { View, ScrollView, Text } from 'react-native';
 import dayjs from 'dayjs';
@@ -31,7 +32,19 @@ export function Habit() {
           {dayAndMonth}
         </Text>
 
-        <ProgressBar progress={30}/>
+        <ProgressBar progress={30} />
+
+        <View className="mt-6">
+          <Checkbox
+            title="Beber no mín 2L de água"
+            checked={false}
+          />
+
+          <Checkbox
+            title="Mín 20min de exercício físico"
+            checked={true}
+          />
+        </View>
       </ScrollView>
     </View>
   );
