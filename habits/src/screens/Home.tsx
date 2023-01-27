@@ -18,7 +18,7 @@ type SummaryProps = Array<{
   date: string;
   amount: number;
   completed: number;
-}>
+}>;
 
 export function Home() {
   const [loading, setLoading] = useState(true);
@@ -73,7 +73,7 @@ export function Home() {
       >
 
         {
-          summary && 
+          summary &&
           <View className="flex-row flex-wrap">
             {
               datesFromYearStart.map(date => {
